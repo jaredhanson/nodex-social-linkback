@@ -1,6 +1,6 @@
 {
   "name": "nodex-social-linkback",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Linkback objects for Bixby.js.",
   "keywords": [
     "linkback",
