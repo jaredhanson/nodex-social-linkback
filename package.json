@@ -1,13 +1,20 @@
 {
   "name": "nodex-social-linkback",
   "version": "0.0.0",
-  "description": "Linkback",
+  "description": "Linkback objects for Bixby.js.",
+  "keywords": [
+    "linkback",
+    "pingback",
+    "trackback",
+    "webmention"
+  ],
   "author": {
     "name": "Jared Hanson",
     "email": "jaredhanson@gmail.com",
     "url": "http://www.jaredhanson.net/"
   },
-  "repository": {    "type": "git",
+  "repository": {
+    "type": "git",
     "url": "git://github.com/jaredhanson/nodex-social-linkback.git"
   },
   "bugs": {
