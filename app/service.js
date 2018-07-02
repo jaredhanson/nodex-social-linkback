@@ -8,6 +8,6 @@ exports = module.exports = function() {
 }
 
 exports['@singleton'] = true;
-exports['@implements'] = 'http://schemas.jaredhanson.me/js/social/linkback/Server';
+exports['@implements'] = 'http://schemas.modulate.io/js/social/ILinkbackService';
 exports['@require'] = [
 ];
