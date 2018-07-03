@@ -5,7 +5,10 @@ exports = module.exports = function(ms) {
   console.log(process.env);
   
   
-  var server = new Server(ms);
+  var url = 'https://pubsub.googleapis.com/v1/projects/' + process.env.GOOGLE_CLOUD_PROJECT + '/topics/test-linkback';
+  
+  
+  var server = new Server(url, ms);
   return server;
 }
 
