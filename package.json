@@ -1,7 +1,7 @@
 {
   "name": "nodex-social-linkback",
   "version": "0.0.1",
-  "description": "Linkback objects for Bixby.js.",
+  "description": "Linkback components for building social web applications with Bixby.js.",
   "keywords": [
     "linkback",
     "pingback",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/nodex-social-linkback.git"
+    "url": "git://github.com/modulate/nodex-social-linkback.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/nodex-social-linkback/issues"
+    "url": "http://github.com/modulate/nodex-social-linkback/issues"
   },
   "license": "MIT",
   "licenses": [
@@ -29,9 +29,9 @@
   ],
   "main": "./app",
   "assembly": {
-    "namespace": "io.modulate/social/linkback",
+    "namespace": "io.modulate/social/notifications",
     "components": [
-      "service"
+      "linkbackservice"
     ]
   },
   "devDependencies": {

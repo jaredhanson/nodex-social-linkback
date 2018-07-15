@@ -1,7 +1,7 @@
 /* global describe, it, expect */
 
 var expect = require('chai').expect;
-var factory = require('../app/service');
+var factory = require('../app/linkbackservice');
 
 
 describe('service', function() {
