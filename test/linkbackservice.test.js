@@ -11,7 +11,7 @@ describe('service', function() {
   });
   
   it('should be annotated', function() {
-    expect(factory['@implements']).to.equal('http://schemas.modulate.io/js/social/ILinkbackService');
+    expect(factory['@implements']).to.equal('http://schemas.modulate.io/js/social/notifications/LinkbackService');
     expect(factory['@singleton']).to.equal(true);
   });
   

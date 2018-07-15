@@ -13,7 +13,7 @@ exports = module.exports = function(ms) {
 }
 
 exports['@singleton'] = true;
-exports['@implements'] = 'http://schemas.modulate.io/js/social/ILinkbackService';
+exports['@implements'] = 'http://schemas.modulate.io/js/social/notifications/LinkbackService';
 exports['@require'] = [
   'http://i.bixbyjs.org/ms'
 ];
