@@ -4,7 +4,7 @@ var $require = require('proxyquire');
 var expect = require('chai').expect;
 var sinon = require('sinon');
 var factory = require('../app/linkbackservice');
-var Server = require('../lib/server');
+var Service = require('../lib/mspubservice');
 
 
 describe('linkbackservice', function() {
@@ -25,16 +25,16 @@ describe('linkbackservice', function() {
     
     
     describe('create', function() {
-      var factory, ServerSpy;
-      ServerSpy = sinon.spy(Server);
+      var factory, ServiceSpy;
+      ServiceSpy = sinon.spy(Service);
       factory = $require('../app/linkbackservice',
-        { '../lib/server': ServerSpy });
+        { '../lib/mspubservice': ServiceSpy });
     
       var service = factory(ms);
     
       it('should construct service', function() {
-        expect(ServerSpy).to.have.been.calledOnce;
-        expect(ServerSpy).to.have.been.calledWithExactly('https://pubsub.googleapis.com/v1/projects/undefined/topics/test-linkback', ms);
+        expect(ServiceSpy).to.have.been.calledOnce;
+        expect(ServiceSpy).to.have.been.calledWithExactly('https://pubsub.googleapis.com/v1/projects/undefined/topics/test-linkback', ms);
       });
     }); // create
     

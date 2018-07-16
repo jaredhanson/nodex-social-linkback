@@ -1,12 +1,12 @@
 exports = module.exports = function(ms) {
   // Load modules.
-  var Server = require('../lib/server');
+  var Service = require('../lib/mspubservice');
   
   
   var url = 'https://pubsub.googleapis.com/v1/projects/' + process.env.GOOGLE_CLOUD_PROJECT + '/topics/test-linkback';
   
   
-  var server = new Server(url, ms);
+  var server = new Service(url, ms);
   return server;
 }
 
