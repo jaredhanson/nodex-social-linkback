@@ -66,6 +66,39 @@ describe('mspublinkbackservice', function() {
         
       }); // successfully publishing message
       
+      describe('encountering an error publishing message', function() {
+        before(function() {
+          sinon.stub(ms, 'publish').yields(new Error('something went wrong'));
+        });
+      
+        after(function() {
+          ms.publish.restore();
+        });
+        
+        var error;
+        before(function(done) {
+          var service = factory(ms)
+          service.ping('https://waterpigs.example/post-by-barnaby', 'https://aaronpk.example/post-by-aaron', function(err) {
+            error = err;
+            done();
+          });
+        });
+        
+        it('should attempt to publish message', function() {
+          expect(ms.publish.callCount).to.equal(1);
+          expect(ms.publish.args[0][0]).to.equal('https://pubsub.googleapis.com/v1/projects/undefined/topics/test-linkback');
+          expect(ms.publish.args[0][1]).to.deep.equal({
+            body: '{"source":"https://waterpigs.example/post-by-barnaby","target":"https://aaronpk.example/post-by-aaron"}'
+          });
+        });
+        
+        it('should yield error', function() {
+          expect(error).to.be.an.instanceof(Error);
+          expect(error.message).to.equal('something went wrong');
+        });
+        
+      }); // encountering an error publishing message
+      
     }); // #ping
     
   }); // LinkbackService
