@@ -2,8 +2,6 @@ exports = module.exports = function(ms) {
   // Load modules.
   var Server = require('../lib/server');
   
-  console.log(process.env);
-  
   
   var url = 'https://pubsub.googleapis.com/v1/projects/' + process.env.GOOGLE_CLOUD_PROJECT + '/topics/test-linkback';
   
