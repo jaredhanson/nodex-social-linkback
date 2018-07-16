@@ -31,7 +31,7 @@
   "assembly": {
     "namespace": "io.modulate/social/notifications",
     "components": [
-      "linkbackservice"
+      "mspublinkbackservice"
     ]
   },
   "devDependencies": {

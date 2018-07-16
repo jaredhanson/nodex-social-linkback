@@ -12,7 +12,7 @@ describe('nodex-social-linkback', function() {
       expect(json.assembly.namespace).to.equal('io.modulate/social/notifications');
       
       expect(json.assembly.components).to.have.length(1);
-      expect(json.assembly.components).to.include('linkbackservice');
+      expect(json.assembly.components).to.include('mspublinkbackservice');
     });
   });
   

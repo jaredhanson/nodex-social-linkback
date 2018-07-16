@@ -3,11 +3,11 @@
 var $require = require('proxyquire');
 var expect = require('chai').expect;
 var sinon = require('sinon');
-var factory = require('../app/linkbackservice');
+var factory = require('../app/mspublinkbackservice');
 var Service = require('../lib/mspubservice');
 
 
-describe('linkbackservice', function() {
+describe('mspublinkbackservice', function() {
   
   it('should export factory function', function() {
     expect(factory).to.be.a('function');
@@ -18,7 +18,7 @@ describe('linkbackservice', function() {
     expect(factory['@implements']).to.equal('http://schemas.modulate.io/js/social/notifications/LinkbackService');
   });
   
-  describe('LinkbackService', function() {
+  describe('MSPublisherLinkbackService', function() {
     var ms = {
       publish: function(){}
     }
@@ -27,7 +27,7 @@ describe('linkbackservice', function() {
     describe('create', function() {
       var factory, ServiceSpy;
       ServiceSpy = sinon.spy(Service);
-      factory = $require('../app/linkbackservice',
+      factory = $require('../app/mspublinkbackservice',
         { '../lib/mspubservice': ServiceSpy });
     
       var service = factory(ms);
