@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/modulate/nodex-social-linkback.git"
+    "url": "git://github.com/modulate/nodex-social-notifications-linkback.git"
   },
   "bugs": {
-    "url": "http://github.com/modulate/nodex-social-linkback/issues"
+    "url": "http://github.com/modulate/nodex-social-notifications-linkback/issues"
   },
   "license": "MIT",
   "licenses": [
